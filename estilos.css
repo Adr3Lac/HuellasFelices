@@ -1,0 +1,265 @@
+/* ==============================
+   ESTILOS GENERALES
+   ============================== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F7F3E9;
+    color: #26382A;
+}
+
+
+/* ==============================
+   NAVEGACIÓN
+   ============================== */
+
+nav {
+    background-color: #6A994E;
+    padding: 16px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 3px 8px rgba(56, 102, 65, 0.15);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #386641;
+    transform: translateY(-1px);
+}
+
+
+/* ==============================
+   ENCABEZADO
+   ============================== */
+
+header {
+    background-color: #386641;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(56, 102, 65, 0.18);
+}
+
+
+/* ==============================
+   CONTENIDO PRINCIPAL
+   ============================== */
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 16px;
+    border: 1px solid #E4EADF;
+    box-shadow: 0 6px 20px rgba(56, 102, 65, 0.10);
+}
+
+
+/* ==============================
+   TÍTULOS
+   ============================== */
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #386641;
+    font-size: 30px;
+}
+
+p {
+    text-align: center;
+    color: #5F6F73;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   FORMULARIOS
+   ============================== */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+    color: #37474F;
+}
+
+
+/* Campos */
+
+input,
+select,
+textarea {
+    padding: 13px 14px;
+    background-color: #FAFCF8;
+    border: 1px solid #D5DCCF;
+    border-radius: 9px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+
+/* Efecto al pasar el mouse */
+
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: #A8C394;
+}
+
+
+/* Efecto al seleccionar */
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #6A994E;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(106, 153, 78, 0.12);
+}
+
+
+/* ==============================
+   BOTONES
+   ============================== */
+
+button {
+    padding: 13px 22px;
+    background-color: #6A994E;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(56, 102, 65, 0.20);
+    transition: all 0.2s ease;
+}
+
+
+/* Efecto al pasar el mouse */
+
+button:hover {
+    background-color: #386641;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(56, 102, 65, 0.25);
+}
+
+
+/* Efecto al hacer clic */
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(56, 102, 65, 0.20);
+}
+
+
+/* ==============================
+   TABLAS
+   ============================== */
+
+table {
+    width: 100%;
+    margin: 25px 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: white;
+    border: 1px solid #E0E7DB;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(56, 102, 65, 0.08);
+}
+
+
+/* Encabezado */
+
+th {
+    background-color: #6A994E;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Celdas */
+
+th,
+td {
+    padding: 13px;
+    text-align: center;
+    border-bottom: 1px solid #E5EAE1;
+}
+
+
+/* Última fila sin borde */
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* Efecto al pasar el mouse */
+
+tr:hover td {
+    background-color: #F3F7EE;
+}
+
+
+/* ==============================
+   RECUADROS / TARJETAS
+   ============================== */
+
+.card {
+    background-color: white;
+    border: 1px solid #E1E8DC;
+    border-radius: 14px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(56, 102, 65, 0.08);
+    transition: all 0.2s ease;
+}
+
+
+/* Efecto al pasar el mouse */
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 16px rgba(56, 102, 65, 0.12);
+}
+
+
+/* ==============================
+   PIE DE PÁGINA
+   ============================== */
+
+footer {
+    margin-top: 40px;
+    background-color: #386641;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    box-shadow: 0 -3px 8px rgba(56, 102, 65, 0.10);
+}
