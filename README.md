@@ -4,7 +4,7 @@
 
 **Huellas Felices** es un sistema de gestión destinado a un **hotel y guardería de mascotas**.
 
-Este proyecto corresponde al desarrollo de un prototipo web navegable realizado como parte del Hito 2 de la asignatura **Prácticas Profesionalizantes I**.
+Este proyecto corresponde al desarrollo de un prototipo web navegable realizado para la materia **Prácticas Profesionalizantes I**.
 
 ---
 
