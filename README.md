@@ -125,4 +125,4 @@ Esta versión representa únicamente una simulación de la interfaz del sistema 
 
 ## Licencia
 
-Proyecto desarrollado con fines exclusivamente educativos para la asignatura **Prácticas Profesionalizantes I**.
+Proyecto desarrollado con fines exclusivamente educativos para la materia **Prácticas Profesionalizantes I**.
