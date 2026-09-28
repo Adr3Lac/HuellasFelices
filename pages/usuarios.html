@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <script src="../js/javascripts.js" defer></script>
+    <title>Usuarios - Huellas Felices</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="../index.html">Inicio</a>
+            <a href="usuarios.html" class="dueño" style="display: none;">Usuarios</a>
+            <a href="turnos.html" class="cliente empleado dueño" style="display: none;">Turnos</a>
+            <a href="historial.html" class="cliente empleado dueño" style="display: none;">Historial</a>
+        </div>
+
+        <div class="nav-auth">
+            <span class="visitante">
+                <a href="login.html" class="btn-login">Iniciar Sesión</a>
+            </span>
+            <span class="cliente empleado dueño" style="display: none;">
+                <span id="nombre-usuario-nav" style="margin-right: 10px; font-weight: bold;"></span>
+                <a href="#" id="btn-logout" class="btn-logout">Cerrar Sesión</a>
+            </span>
+        </div>
+    </nav>
+
+    <header>Trabajo PPI - Hotel de Mascotas</header>
+
+    <main>
+        <h1>Gestión de Usuarios</h1>
+                <table>
+            <thead>
+                <tr>
+                    <th>Usuario</th>
+                    <th>Rol</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-usuarios"></tbody>
+        </table>
+    </main>
+
+    <footer>Información - Huellas Felices</footer>
+</body>
+</html>

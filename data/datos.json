@@ -1,0 +1,29 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Roberto",
+      "email": "dueno@huellasfelices.com",
+      "password": "1234",
+      "rol": "dueño"
+    },
+
+    {
+      "id": 2,
+      "nombre": "Laura",
+      "email": "empleado@huellasfelices.com",
+      "password": "1234",
+      "rol": "empleado"
+    },
+    
+    {
+      "id": 3,
+      "nombre": "Nicolás",
+      "email": "nicolas@gmail.com",
+      "password": "1234",
+      "rol": "cliente"
+    }
+  ],
+  "mascotas": [],
+  "turnos": []
+}

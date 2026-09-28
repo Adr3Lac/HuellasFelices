@@ -1,32 +1,59 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <script src="js/javascripts.js" defer></script>
+    <title>Inicio - Huellas Felices</title>
 </head>
 <body>
 
-    <nav>
-    <a href="index.html">Inicio</a>
-    <a href="usuarios.html">Usuarios</a>
-    <a href="turnos.html">Turnos</a>
-    <a href="historial.html">Historial</a>
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <!-- Enlaces adaptados a los 3 roles actuales -->
+            <a href="pages/usuarios.html" class="dueño" style="display: none;">Usuarios</a>
+            <a href="pages/turnos.html" class="cliente empleado dueño" style="display: none;">Turnos</a>
+            <a href="pages/historial.html" class="cliente empleado dueño" style="display: none;">Historial</a>
+        </div>
+
+        <div class="nav-auth">
+            <!-- Para visitantes -->
+            <span class="visitante">
+                <a href="pages/login.html" class="btn-login">Iniciar Sesión</a>
+            </span>
+
+            <!-- Para usuarios con sesión activa -->
+            <span class="cliente empleado dueño" style="display: none;">
+                <span id="nombre-usuario-nav" style="margin-right: 10px; font-weight: bold;"></span>
+                <a href="#" id="btn-logout" class="btn-logout">Cerrar Sesión</a>
+            </span>
+        </div>
     </nav>
 
     <header>
-        Trabajo PPI
+        <img src="imagen/huellas felices.jpg" width="100" alt="Huellas Felices Logo"><br>
+        Trabajo PPI - Hotel de Mascotas
     </header>
 
     <main>
+        <h1>Bienvenido al sistema de gestión de turnos</h1>
 
-    <h1>Bienvenido al sistema de gestión de turnos</h1>
+        <!-- Mensaje si no ha iniciado sesión -->
+        <div class="visitante">
+            <p>Por favor, <strong>inicia sesión</strong> desde el botón superior derecho para solicitar un turno o acceder al sistema.</p>
+        </div>
 
-    <p>Desde aquí podrá gestionar usuarios, solicitar turnos y consultar el historial.</p>
-
+        <!-- Mensaje para usuarios logueados -->
+        <div class="cliente empleado dueño" style="display: none;">
+            <p>Desde aquí podrá consultar sus datos, solicitar nuevos turnos de hospedaje y revisar el historial de reservas.</p>
+        </div>
     </main>
 
     <footer>
-        Información
+        Información - Huellas Felices
     </footer>
 
 </body>

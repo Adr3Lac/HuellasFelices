@@ -1,0 +1,539 @@
+/* =========================================================
+   HUELLAS FELICES
+   Estilos generales
+   ========================================================= */
+
+:root {
+    --verde-oscuro: #315c4b;
+    --verde: #5f927b;
+    --verde-claro: #9fc7ad;
+    --verde-pastel: #dceee3;
+    --verde-suave: #eef7f1;
+
+    --crema: #fffdf7;
+    --blanco: #ffffff;
+
+    --texto: #30423a;
+    --texto-suave: #66756e;
+
+    --sombra: 0 10px 30px rgba(49, 92, 75, 0.12);
+    --sombra-hover: 0 15px 35px rgba(49, 92, 75, 0.20);
+
+    --radio: 18px;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--verde-suave);
+    color: var(--texto);
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   BARRA DE NAVEGACIÓN
+   ========================================================= */
+
+.navbar {
+    width: 100%;
+    min-height: 70px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 7%;
+
+    border-bottom: 1px solid rgba(95, 146, 123, 0.15);
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* Links */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--verde-oscuro);
+
+    font-weight: bold;
+    font-size: 15px;
+
+    padding: 10px 15px;
+
+    border-radius: 10px;
+
+    transition: all 0.25s ease;
+}
+
+.nav-links a:hover {
+    background: var(--verde-pastel);
+    color: var(--verde-oscuro);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   BOTÓN LOGIN
+   ========================================================= */
+
+.btn-login {
+    display: inline-block;
+
+    background: var(--verde-oscuro);
+    color: white !important;
+
+    text-decoration: none;
+
+    padding: 11px 20px;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    transition: all 0.25s ease;
+
+    box-shadow: 0 5px 15px rgba(49, 92, 75, 0.18);
+}
+
+.btn-login:hover {
+    background: var(--verde);
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(49, 92, 75, 0.25);
+}
+
+
+/* =========================================================
+   LOGOUT
+   ========================================================= */
+
+.btn-logout {
+    display: inline-block;
+
+    background: #e9f3ed;
+    color: var(--verde-oscuro);
+
+    padding: 9px 15px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.25s ease;
+}
+
+.btn-logout:hover {
+    background: #d2e8db;
+}
+
+
+/* =========================================================
+   HEADER / PORTADA
+   ========================================================= */
+
+header {
+    position: relative;
+
+    min-height: 420px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    overflow: hidden;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(49, 92, 75, 0.94),
+            rgba(95, 146, 123, 0.70)
+        ),
+        url("../imagen/huellas-hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Decoración */
+
+header::before {
+    content: "🐾";
+
+    position: absolute;
+
+    top: 35px;
+    left: 8%;
+
+    font-size: 55px;
+
+    opacity: 0.25;
+
+    transform: rotate(-20deg);
+}
+
+header::after {
+    content: "🐾";
+
+    position: absolute;
+
+    bottom: 35px;
+    right: 9%;
+
+    font-size: 70px;
+
+    opacity: 0.20;
+
+    transform: rotate(15deg);
+}
+
+
+/* Logo */
+
+header img {
+    width: 120px;
+    height: 120px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid rgba(255, 255, 255, 0.85);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    margin-bottom: 20px;
+
+    background: white;
+
+    transition: transform 0.4s ease;
+}
+
+header img:hover {
+    transform: scale(1.06) rotate(2deg);
+}
+
+
+/* Texto del header */
+
+header {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+   ========================================================= */
+
+main {
+    width: min(1100px, 90%);
+
+    margin: 45px auto;
+
+    background: var(--blanco);
+
+    padding: 45px;
+
+    border-radius: var(--radio);
+
+    box-shadow: var(--sombra);
+
+    text-align: center;
+
+    position: relative;
+}
+
+
+/* Título */
+
+main h1 {
+    color: var(--verde-oscuro);
+
+    font-size: clamp(26px, 4vw, 38px);
+
+    margin-bottom: 25px;
+
+    line-height: 1.2;
+}
+
+
+/* Texto */
+
+main p {
+    color: var(--texto-suave);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    max-width: 750px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   MENSAJES DE USUARIO
+   ========================================================= */
+
+main .visitante,
+main .cliente {
+    background: var(--verde-suave);
+
+    border: 1px solid var(--verde-pastel);
+
+    padding: 22px;
+
+    border-radius: 15px;
+
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   NEGRITA
+   ========================================================= */
+
+strong {
+    color: var(--verde-oscuro);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    margin-top: auto;
+
+    background: var(--verde-oscuro);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px 20px;
+
+    font-size: 14px;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   DETALLE DECORATIVO DEL FOOTER
+   ========================================================= */
+
+footer::before {
+    content: "🐾";
+
+    display: block;
+
+    font-size: 25px;
+
+    margin-bottom: 8px;
+
+    opacity: 0.8;
+}
+
+
+/* =========================================================
+   ANIMACIONES
+   ========================================================= */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    animation: aparecer 0.7s ease;
+}
+
+main {
+    animation: aparecer 0.7s ease 0.15s both;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 14px 4%;
+    }
+
+    .nav-links {
+        gap: 3px;
+    }
+
+    .nav-links a {
+        padding: 9px 10px;
+        font-size: 14px;
+    }
+
+    .btn-login {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    header {
+        min-height: 380px;
+    }
+
+    main {
+        padding: 35px 25px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+
+        padding: 15px 10px;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .nav-auth {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .btn-login {
+        display: inline-block;
+    }
+
+    header {
+        min-height: 350px;
+
+        padding: 40px 20px;
+    }
+
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+
+    main {
+        width: 92%;
+
+        margin: 25px auto;
+
+        padding: 30px 18px;
+
+        border-radius: 15px;
+    }
+
+    main h1 {
+        font-size: 27px;
+    }
+
+    main p {
+        font-size: 15px;
+    }
+
+    header::before {
+        left: 3%;
+        font-size: 40px;
+    }
+
+    header::after {
+        right: 3%;
+        font-size: 45px;
+    }
+}
+
+
+/* =========================================================
+   CELULARES MUY CHICOS
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .nav-links a {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .btn-login {
+        font-size: 13px;
+    }
+
+    header {
+        min-height: 320px;
+    }
+
+    main h1 {
+        font-size: 24px;
+    }
+}
+

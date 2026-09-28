@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <script src="../js/javascripts.js" defer></script>
+    <title>Voucher Digital - Huellas Felices</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="../index.html">Inicio</a>
+            <a href="usuarios.html" class="dueño" style="display: none;">Usuarios</a>
+            <a href="turnos.html" class="cliente empleado dueño" style="display: none;">Turnos</a>
+            <a href="historial.html" class="cliente empleado dueño" style="display: none;">Historial</a>
+        </div>
+
+        <div class="nav-auth">
+            <span class="cliente empleado dueño" style="display: none;">
+                <span id="nombre-usuario-nav" style="margin-right: 10px; font-weight: bold;"></span>
+                <a href="#" id="btn-logout" class="btn-logout">Cerrar Sesión</a>
+            </span>
+        </div>
+    </nav>
+
+    <main>
+        <div id="voucher-container" style="border: 2px dashed #28a745; padding: 25px; border-radius: 10px; background-color: #fcfcfc;">
+            <h2 style="color: #28a745; text-align: center; margin-top: 0;">✔ Voucher Digital de Reserva</h2>
+            <p style="text-align: center;">Presenta este comprobante al momento del ingreso de tu mascota.</p>
+            <hr>
+
+            <h3>Detalles de la Estadía</h3>
+            <p><strong>Código de Reserva:</strong> <span id="v-codigo"></span></p>
+            <p><strong>Responsable:</strong> <span id="v-nombre"></span></p>
+            <p><strong>Mascota:</strong> <span id="v-mascota"></span> (<span id="v-tamano"></span>)</p>
+            <p><strong>Alojamiento Reservado:</strong> <span id="v-alojamiento"></span></p>
+            <p><strong>Fechas:</strong> Del <span id="v-ingreso"></span> al <span id="v-egreso"></span> (<span id="v-dias"></span> días)</p>
+            <p><strong>Estado:</strong> <span id="v-estado" style="color: orange; font-weight: bold;"></span></p>
+
+            <hr>
+            <h3>Requisitos Obligatorios de Ingreso</h3>
+            <ul style="line-height: 1.6;">
+                <td> Libreta sanitaria al día (Vacuna Antirrábica y Quíntuple/Triple Felina).</td>
+                <td> Desparasitación interna y externa realizada en los últimos 15 días.</td>
+                <td> Alimento propio suficiente para todos los días de la estadía.</td>
+                <td> Collar/Pretal con chapita identificatoria y correa.</td>
+            </ul>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <button onclick="window.print()" style="background-color: #007bff;">Imprimir / Guardar Voucher</button>
+                <a href="historial.html" style="margin-left: 10px; text-decoration: none; font-weight: bold; color: #333;">Ver Historial de Turnos</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        Información - Huellas Felices
+    </footer>
+
+</body>
+</html>
