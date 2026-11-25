@@ -1,37 +1,39 @@
-# Sistema de Gestión de Turnos
+# Huellas Felices — Sistema de Gestión de Turnos para Hotel de Mascotas
 
-## Hito 2 - PPI
+MVP desarrollado para la materia **Proyecto Práctico Integrador (PPI)**. Permite a clientes solicitar reservas de estadía para sus mascotas generando un voucher digital, y al personal del hotel (empleados y dueño) administrar los turnos, estados, cupos por tipo de alojamiento y roles de usuario.
 
-Proyecto web realizado para el Hito 2 de la materia PPI.
+---
 
-## Descripción
+## Enlaces de la Aplicación Publicada
 
-El proyecto consiste en el desarrollo de un prototipo web para un sistema de gestión de turnos.
+- **Frontend (Static Site):** `PENDIENTE_URL_FRONTEND_RENDER`
+- **Backend / API REST (Web Service):** `PENDIENTE_URL_BACKEND_RENDER`
 
-El sistema permite visualizar los usuarios registrados, solicitar turnos y consultar un historial de turnos.
+---
 
-## Funcionalidades
+## Arquitectura y Estructura del Proyecto
 
-- Página de inicio.
-- Visualización de usuarios.
-- Solicitud de turnos.
-- Confirmación de solicitud de turno.
-- Consulta del historial de turnos.
-- Navegación entre las diferentes páginas del sistema.
+El sistema sigue una arquitectura **cliente-servidor** desacoplada que se comunica mediante peticiones HTTP (`fetch`) con intercambio de datos en formato JSON.
 
-## Páginas del sistema
-
-### Inicio
-Presenta el sistema y permite acceder a las diferentes secciones.
-
-### Usuarios
-Muestra una tabla con los usuarios registrados y su estado.
-
-### Turnos
-Permite ingresar el nombre del usuario y seleccionar una fecha para solicitar un turno.
-
-### Confirmación
-Muestra un mensaje indicando que la solicitud del turno fue realizada correctamente.
-
-### Historial
-Muestra los turnos registrados junto con su fecha, usuario y estado.
+```text
+trabajo-ppi/
+├── backend/              # API REST en Node.js + Express (almacenamiento en memoria)
+│   ├── index.js
+│   ├── package.json
+│   └── package-lock.json
+├── frontend/             # Aplicación web estática (HTML, CSS y JavaScript)
+│   ├── index.html
+│   ├── estilos/
+│   │   └── estilos.css
+│   ├── imagen/
+│   ├── js/
+│   │   └── javascripts.js
+│   └── pages/
+│       ├── confirmacion.html
+│       ├── historial.html
+│       ├── login.html
+│       ├── turnos.html
+│       └── usuarios.html
+├── documentacion/        # Relevamiento, diagramas y archivos de entregas previas
+├── .gitignore
+└── README.md
