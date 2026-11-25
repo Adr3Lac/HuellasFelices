@@ -1,7 +1,7 @@
 // ==========================================
 // CONSTANTES Y CONFIGURACIÓN GLOBAL
 // ==========================================
-const API_URL = "https://huellasfelices-p2ke.onrender.com/"; // Cambiar por la URL pública del backend al desplegar
+const API_URL = "https://huellasfelices-p2ke.onrender.com"; // Cambiar por la URL pública del backend al desplegar
 
 const SESSION_KEY = "huellasFelicesUsuario";
 const VOUCHER_KEY = "huellasFelicesUltimoVoucher";
