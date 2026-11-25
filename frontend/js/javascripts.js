@@ -119,7 +119,8 @@ async function consultarCuposAPI(alojamiento, fechaIngreso, fechaEgreso) {
 }
 
 async function loginAPI(email, password) {
-  const res = await fetch(`${API_URL}/api/login`, {
+  const baseUrl = API_URL.replace(/\/+$/, "");
+  const res = await fetch(`${baseUrl}/api/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, password })
