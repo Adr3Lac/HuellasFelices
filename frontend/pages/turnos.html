@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <script src="../js/javascripts.js" defer></script>
+    <title>Reserva de Turnos - Huellas Felices</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="../index.html">Inicio</a>
+            <a href="usuarios.html" class="dueño" style="display: none;">Usuarios</a>
+            <a href="turnos.html" class="cliente empleado dueño" style="display: none;">Turnos</a>
+            <a href="historial.html" class="cliente empleado dueño" style="display: none;">Historial</a>
+        </div>
+
+        <div class="nav-auth">
+            <span class="visitante">
+                <a href="login.html" class="btn-login">Iniciar Sesión</a>
+            </span>
+            <span class="cliente empleado dueño" style="display: none;">
+                <span id="nombre-usuario-nav" style="margin-right: 10px; font-weight: bold;"></span>
+                <a href="#" id="btn-logout" class="btn-logout">Cerrar Sesión</a>
+            </span>
+        </div>
+    </nav>
+
+    <header>
+        Trabajo PPI - Hotel de Mascotas
+    </header>
+
+    <main>
+        <h1>Solicitar Reserva de Estadía</h1>
+        <p>Completá los datos de la estadía para generar el voucher y enviar la solicitud al sistema.</p>
+
+        <form id="form-turno" style="max-width: 520px; display: flex; flex-direction: column; gap: 12px;">
+            <div>
+                <label for="input-nombre"><strong>Nombre del Responsable:</strong></label><br>
+                <input type="text" id="input-nombre" placeholder="Tu nombre" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+            </div>
+
+            <div>
+                <label for="input-mascota"><strong>Nombre de la Mascota:</strong></label><br>
+                <input type="text" id="input-mascota" placeholder="Nombre de tu perro o gato" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+            </div>
+
+            <div>
+                <label for="select-tamano"><strong>Tamaño de la Mascota:</strong></label><br>
+                <select id="select-tamano" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="Pequeño (hasta 10kg)">Pequeño (hasta 10 kg)</option>
+                    <option value="Mediano (10 a 25kg)">Mediano (10 a 25 kg)</option>
+                    <option value="Grande (más de 25kg)">Grande (más de 25 kg)</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="select-alojamiento"><strong>Tipo de Alojamiento:</strong></label><br>
+                <select id="select-alojamiento" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+                    <option value="" disabled selected>Selecciona el tipo de alojamiento</option>
+                    <option value="Estándar">Canil Estándar (Ideal perros medianos/grandes)</option>
+                    <option value="Suite VIP">Suite VIP (Espacio amplio con aire/calefacción)</option>
+                    <option value="Espacio Felino">Espacio Felino (Exclusivo para gatos)</option>
+                </select>
+            </div>
+
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="input-fecha-ingreso"><strong>Fecha de Ingreso:</strong></label><br>
+                    <input type="date" id="input-fecha-ingreso" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+                </div>
+
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="input-fecha-egreso"><strong>Fecha de Egreso:</strong></label><br>
+                    <input type="date" id="input-fecha-egreso" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+                </div>
+            </div>
+
+            <div id="info-cupos" style="background-color: #e9ecef; padding: 10px 12px; border-radius: 6px; font-weight: bold; text-align: center;">
+                Cupos disponibles para este alojamiento: <span id="cupos-numero">-</span>
+            </div>
+
+            <button type="submit" style="margin-top: 6px; padding: 10px 14px; cursor: pointer;">
+                Confirmar Reserva y Generar Voucher
+            </button>
+        </form>
+    </main>
+
+    <footer>
+        Información - Huellas Felices
+    </footer>
+
+</body>
+</html>
